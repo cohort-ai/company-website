@@ -1,5 +1,6 @@
 import './App.css'
 import { Navbar } from './components/ui/Navbar'
+import { Footer } from './components/ui/Footer'
 import { Routes, Route } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/team" element={<Dummy name="Team" />} />
         <Route path="/contact" element={<Dummy name="Contact" />} />
       </Routes>
+      <Footer />
     </>
   )
 }
