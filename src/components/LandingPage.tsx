@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { BrainCog, Users, Sparkles, Calendar, Rocket, Store, Truck } from "lucide-react";
+import qisRiskLogo from "@/assets/images/testimonials/qis_risk.png";
 
 export default function LandingPage() {
   return (
@@ -73,7 +74,7 @@ export default function LandingPage() {
           {/* Digital Assets Platform (QIS Risk) */}
           <Card className="h-56 flex flex-col items-center transition-transform hover:shadow-lg hover:scale-[1.03]">
             <CardContent className="flex flex-col items-center flex-1 justify-center gap-2 w-full">
-              <img src="src/assets/images/testimonials/qis_risk.png" alt="QIS Risk Logo" className="h-10 mb-2" />
+              <img src={qisRiskLogo} alt="QIS Risk Logo" className="h-10 mb-2" />
               <CardTitle className="text-base font-bold text-foreground mt-2">Digital Assets Platform</CardTitle>
               <p className="text-sm text-muted-foreground text-center mt-2">"Cohort's team guided our AI adoption from idea to production, unlocking new revenue streams."</p>
               <span className="text-xs text-muted-foreground mt-1">— Fred Cox, Founder</span>
