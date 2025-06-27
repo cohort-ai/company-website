@@ -1,13 +1,23 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import { Navbar } from './components/ui/Navbar'
+import { Routes, Route } from 'react-router-dom'
+
+function Dummy({ name }: { name: string }) {
+  return <div className="p-8 text-center text-2xl">{name} Page (Coming Soon)</div>;
+}
 
 function App() {
-
   return (
     <>
-      <Button>
-        Click me
-      </Button>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dummy name="Home" />} />
+        <Route path="/solutions/ai-advisory" element={<Dummy name="AI Advisory" />} />
+        <Route path="/solutions/ai-recruitment" element={<Dummy name="AI Recruitment" />} />
+        <Route path="/about" element={<Dummy name="About" />} />
+        <Route path="/team" element={<Dummy name="Team" />} />
+        <Route path="/contact" element={<Dummy name="Contact" />} />
+      </Routes>
     </>
   )
 }
