@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "@/assets/images/logo.png";
 import {
   NavigationMenu,
@@ -12,6 +13,12 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 export function Navbar() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false);
+  };
+
   return (
     <nav className="w-full bg-background/80 backdrop-blur border-b border-border px-4 py-2 flex items-center justify-between">
       {/* Logo always visible */}
@@ -59,27 +66,27 @@ export function Navbar() {
       </div>
       {/* Mobile Navigation */}
       <div className="md:hidden">
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <button className="p-2 rounded hover:bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="left" className="p-0 w-64">
+          <SheetContent side="left" className="p-0 w-64" onOpenAutoFocus={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2 p-4">
-              <Link to="/" className="flex items-center gap-2 mb-4">
+              <Link to="/" className="flex items-center gap-2 mb-4" onClick={handleLinkClick}>
                 <img src={logo} alt="Cohort Logo" className="h-10 w-auto" />
               </Link>
-              <Link to="/" className="font-medium py-2 rounded hover:bg-primary hover:text-white">Home</Link>
+              <Link to="/" className="font-medium py-2 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>Home</Link>
               <div>
                 <div className="font-medium py-2">Solutions</div>
                 <div className="pl-4 flex flex-col gap-1">
-                  <Link to="/solutions/ai-advisory" className="py-1 rounded hover:bg-primary hover:text-white">AI Advisory</Link>
-                  <Link to="/solutions/ai-recruitment" className="py-1 rounded hover:bg-primary hover:text-white">AI Recruitment</Link>
+                  <Link to="/solutions/ai-advisory" className="py-1 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>AI Advisory</Link>
+                  <Link to="/solutions/ai-recruitment" className="py-1 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>AI Recruitment</Link>
                 </div>
               </div>
-              <Link to="/about" className="font-medium py-2 rounded hover:bg-primary hover:text-white">About</Link>
-              <Link to="/contact" className="font-medium py-2 rounded hover:bg-primary hover:text-white">Contact</Link>
+              <Link to="/about" className="font-medium py-2 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>About</Link>
+              <Link to="/contact" className="font-medium py-2 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>Contact</Link>
             </div>
           </SheetContent>
         </Sheet>
