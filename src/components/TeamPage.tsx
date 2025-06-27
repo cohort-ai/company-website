@@ -21,7 +21,15 @@ const team = [
 export default function TeamPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-2xl font-bold mb-8 text-center">Our Team</h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        Meet the Experts Behind Cohort AI
+      </h1>
+      <p className="text-lg md:text-xl text-center text-muted-foreground mb-10 max-w-3xl mx-auto">
+        In today's competitive landscape, <span className="font-semibold text-foreground">Artificial Intelligence</span> is not just an advantage – it's a necessity. Yet, for many Small and Medium-sized Enterprises (SMEs) across Asia, the path to AI adoption can seem complex, costly, and out of reach.<br/><br/>
+        <span className="font-semibold text-foreground">This is where Cohort AI comes in.</span><br/><br/>
+        We are a team of seasoned technology professionals with decades of collective experience leading major initiatives at large global corporations. Having seen firsthand the transformative power of AI, we founded Cohort AI with a single, clear mission: to democratize access to world-class technological expertise for the businesses that form the backbone of Asia's economy.
+      </p>
+      <h2 className="text-2xl font-bold mb-8 text-center">Our Team</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {team.map((member) => (
           <Card key={member.name} className="flex flex-col items-center p-6">
