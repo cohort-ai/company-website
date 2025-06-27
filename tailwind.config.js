@@ -15,6 +15,9 @@ module.exports = {
         muted: '#232B41',
         border: '#232B41',
       },
+      fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
     },
   },
   darkMode: 'class',
