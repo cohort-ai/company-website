@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FaRocket, FaUsers, FaCogs, FaArrowRight } from "react-icons/fa";
+import { FaRocket, FaUsers, FaCogs } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Calendar } from "lucide-react";
 
 export default function AIAdvisoryPage() {
   return (
@@ -74,13 +76,11 @@ export default function AIAdvisoryPage() {
 
       {/* CTA Section */}
       <div className="text-center">
-        <Button
-          size="lg"
-          className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
-          onClick={() => window.location.href = '/contact'}
-        >
-          <span className="mr-2">Book a Consultation to Discover How AI Can Work for You</span>
-          <FaArrowRight className="h-5 w-5" />
+      <Button asChild className="w-full md:w-auto flex items-center gap-2 py-8 rounded-md" variant="default">
+          <Link to="/contact">
+            <Calendar className="h-5 w-5 flex-shrink-0" />
+            <span className="whitespace-normal">Book a Consultation to Discover How AI Can Work for You</span>
+          </Link>
         </Button>
       </div>
     </div>
