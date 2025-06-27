@@ -20,8 +20,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/solutions/ai-advisory" element={<Dummy name="AI Advisory" />} />
         <Route path="/solutions/ai-recruitment" element={<Dummy name="AI Recruitment" />} />
-        <Route path="/about" element={<Dummy name="About" />} />
-        <Route path="/team" element={<TeamPage />} />
+        <Route path="/about" element={<TeamPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       </main>

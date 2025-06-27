@@ -51,11 +51,6 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
-                <Link to="/team" className="font-medium px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">Team</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
                 <Link to="/contact" className="font-medium px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">Contact</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -84,7 +79,6 @@ export function Navbar() {
                 </div>
               </div>
               <Link to="/about" className="font-medium py-2 rounded hover:bg-primary hover:text-white">About</Link>
-              <Link to="/team" className="font-medium py-2 rounded hover:bg-primary hover:text-white">Team</Link>
               <Link to="/contact" className="font-medium py-2 rounded hover:bg-primary hover:text-white">Contact</Link>
             </div>
           </SheetContent>
