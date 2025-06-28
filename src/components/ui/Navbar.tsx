@@ -37,18 +37,20 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="flex flex-col min-w-[180px] p-2">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/solutions/ai-advisory" className="block px-4 py-2 rounded hover:bg-primary hover:text-white">AI Advisory</Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/solutions/ai-recruitment" className="block px-4 py-2 rounded hover:bg-primary hover:text-white">AI Recruitment</Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
+                <div className="flex flex-col gap-2 min-w-[320px] p-4">
+                  <NavigationMenuLink asChild>
+                    <Link to="/solutions/ai-advisory" className="block group px-4 py-3 rounded hover:bg-primary/10 transition-colors">
+                      <div className="font-semibold text-base text-foreground">AI Advisory</div>
+                      <div className="text-sm text-muted-foreground group-hover:text-primary mt-1">Discover How AI Can Work for You</div>
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link to="/solutions/ai-recruitment" className="block group px-4 py-3 rounded hover:bg-primary/10 transition-colors">
+                      <div className="font-semibold text-base text-foreground">AI Recruitment</div>
+                      <div className="text-sm text-muted-foreground group-hover:text-primary mt-1">Try our AI Recruitment Tool</div>
+                    </Link>
+                  </NavigationMenuLink>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
