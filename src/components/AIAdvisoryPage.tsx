@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FaRocket, FaUsers, FaCogs } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Calendar } from "lucide-react";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 
 export default function AIAdvisoryPage() {
   return (
@@ -19,47 +20,21 @@ export default function AIAdvisoryPage() {
 
       {/* Services Grid */}
       <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-          <CardHeader className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <FaRocket className="h-8 w-8 text-primary" />
-            </div>
-            <CardTitle className="text-2xl font-bold">Expert AI Consulting</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-muted-foreground leading-relaxed">
-              We help you identify the most impactful AI opportunities for your business and create a strategic roadmap for implementation.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-          <CardHeader className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <FaUsers className="h-8 w-8 text-primary" />
-            </div>
-            <CardTitle className="text-2xl font-bold">Hands-On Workshops & Training</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-muted-foreground leading-relaxed">
-              We empower your team with the practical skills and knowledge needed to leverage AI tools confidently.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-          <CardHeader className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <FaCogs className="h-8 w-8 text-primary" />
-            </div>
-            <CardTitle className="text-2xl font-bold">Custom AI Solutions</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-muted-foreground leading-relaxed">
-              For unique challenges, we design and build bespoke AI systems that deliver a decisive competitive edge.
-            </p>
-          </CardContent>
-        </Card>
+        <ServiceCard
+          title="Expert AI Consulting"
+          description="We help you identify the most impactful AI opportunities for your business and create a strategic roadmap for implementation."
+          icon={<FaRocket className="h-8 w-8 text-primary" />}
+        />
+        <ServiceCard
+          title="Hands-On Workshops & Training"
+          description="We empower your team with the practical skills and knowledge needed to leverage AI tools confidently."
+          icon={<FaUsers className="h-8 w-8 text-primary" />}
+        />
+        <ServiceCard
+          title="Custom AI Solutions"
+          description="For unique challenges, we design and build bespoke AI systems that deliver a decisive competitive edge."
+          icon={<FaCogs className="h-8 w-8 text-primary" />}
+        />
       </div>
 
       {/* Approach Section */}
