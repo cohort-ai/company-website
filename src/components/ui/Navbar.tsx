@@ -20,7 +20,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-background/80 backdrop-blur border-b border-border px-4 py-2 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur border-b border-border px-4 py-2 flex items-center justify-between">
       {/* Logo always visible */}
       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="Cohort Logo" className="h-10 w-auto" />
