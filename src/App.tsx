@@ -7,6 +7,7 @@ import ContactPage from './components/ContactPage'
 import TeamPage from './components/TeamPage'
 import MissionPage from './components/MissionPage'
 import AIAdvisoryPage from './components/AIAdvisoryPage'
+import { ScrollToTop } from './components/ui/ScrollToTop'
 
 function Dummy({ name }: { name: string }) {
   return <div className="p-8 text-center text-2xl">{name} Page (Coming Soon)</div>;
@@ -18,6 +19,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1 pt-16">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/solutions/ai-advisory" element={<AIAdvisoryPage />} />
