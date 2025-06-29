@@ -54,9 +54,23 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link to="/about" className="font-medium px-4 py-2 rounded hover:bg-primary hover:text-white transition-colors">About</Link>
-              </NavigationMenuLink>
+              <NavigationMenuTrigger>About</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="flex flex-col gap-2 min-w-[320px] p-4">
+                  <NavigationMenuLink asChild>
+                    <Link to="/about/mission" className="block group px-4 py-3 rounded hover:bg-primary/10 transition-colors">
+                      <div className="font-semibold text-base text-foreground">Mission</div>
+                      <div className="text-sm text-muted-foreground group-hover:text-primary mt-1">Learn about our mission and values</div>
+                    </Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink asChild>
+                    <Link to="/about/team" className="block group px-4 py-3 rounded hover:bg-primary/10 transition-colors">
+                      <div className="font-semibold text-base text-foreground">Team</div>
+                      <div className="text-sm text-muted-foreground group-hover:text-primary mt-1">Meet our expert team</div>
+                    </Link>
+                  </NavigationMenuLink>
+                </div>
+              </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
@@ -87,7 +101,13 @@ export function Navbar() {
                   <Link to="/solutions/ai-recruitment" className="py-1 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>AI Recruitment</Link>
                 </div>
               </div>
-              <Link to="/about" className="font-medium py-2 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>About</Link>
+              <div>
+                <div className="font-medium py-2">About</div>
+                <div className="pl-4 flex flex-col gap-1">
+                  <Link to="/about/mission" className="py-1 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>Mission</Link>
+                  <Link to="/about/team" className="py-1 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>Team</Link>
+                </div>
+              </div>
               <Link to="/contact" className="font-medium py-2 rounded hover:bg-primary hover:text-white" onClick={handleLinkClick}>Contact</Link>
             </div>
           </SheetContent>
