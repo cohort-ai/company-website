@@ -7,7 +7,7 @@ const STOCK_VIDEO_URL = "https://videos.pexels.com/video-files/3129671/3129671-u
 
 export default function HeroCard() {
   return (
-    <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-auto min-h-[60vh] sm:min-h-[40vh] flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <video
         src={STOCK_VIDEO_URL}
