@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/company-website/',
+  base: 'https://cohort.hk/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
