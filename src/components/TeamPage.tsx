@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { FaLinkedin } from "react-icons/fa";
 import rafalPhoto from "@/assets/images/team/rafal.png";
 import tonyPhoto from "@/assets/images/team/tony.jpg";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 const team = [
   {
@@ -20,41 +21,41 @@ const team = [
 
 export default function TeamPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-        Our Team
-      </h1>
-      <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto text-center">
-        Meet the experts behind Cohort AI - seasoned technology professionals with decades of collective experience leading major initiatives at large global corporations.
-      </p>
+    <div className="flex flex-col">
+      <PageHeader
+        title="Meet the Experts Behind Cohort AI"
+        subtitle="We are a team of seasoned technology professionals with decades of collective experience leading major initiatives at large global corporations. Having seen firsthand the transformative power of AI, we founded Cohort AI with a single, clear mission: to democratize access to world-class technological expertise for the businesses that form the backbone of Asia's economy."
+      />
 
-      <section className="w-full py-16 px-4 rounded-lg">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          {team.map((member) => (
-            <Card key={member.name} className="flex flex-col items-center p-6">
-              <CardHeader className="flex flex-col items-center w-full">
-                <div className="w-96 h-96 overflow-hidden mb-4 border-2 bg-muted flex items-center justify-center rounded-lg">
-                  <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
-                </div>
-                <CardTitle className="text-xl font-bold text-foreground mb-2">{member.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center">
-                <CardDescription className="mb-4 text-center">{member.bio}</CardDescription>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition-colors"
-                  aria-label={`LinkedIn profile of ${member.name}`}
-                >
-                  <FaLinkedin className="h-5 w-5" />
-                  <span>LinkedIn</span>
-                </a>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <section className="w-full py-16 px-4 rounded-lg">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            {team.map((member) => (
+              <Card key={member.name} className="flex flex-col items-center p-6">
+                <CardHeader className="flex flex-col items-center w-full">
+                  <div className="w-96 h-96 overflow-hidden mb-4 border-2 bg-muted flex items-center justify-center rounded-lg">
+                    <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-foreground mb-2">{member.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <CardDescription className="mb-4 text-center">{member.bio}</CardDescription>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition-colors"
+                    aria-label={`LinkedIn profile of ${member.name}`}
+                  >
+                    <FaLinkedin className="h-5 w-5" />
+                    <span>LinkedIn</span>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
