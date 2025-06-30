@@ -15,9 +15,9 @@ interface TestimonialCarouselProps {
   interval?: number;
 }
 
-const CARD_HEIGHT = 270;
+const CARD_HEIGHT = 135;
 const VISIBLE_CARDS = 3;
-const LOGO_SIZE = 30;
+const LOGO_SIZE = 15;
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -108,29 +108,29 @@ export function TestimonialCarousel({ testimonials, interval = 3000 }: Testimoni
               <Card className={`w-full ${isCenter ? 'max-w-none sm:max-w-xl' : 'max-w-xl'} min-h-48 flex flex-col items-center border-2 border-primary/20 bg-background transition-all duration-700 ${isCenter ? 'shadow-xl border-primary/40' : 'shadow-none'}`}>
                 <CardContent className={`flex flex-row items-center flex-1 justify-center gap-6 w-full py-10 px-2 sm:px-8`}>
                   {/* Logo/Image on the left */}
-                  <div className="flex-shrink-0 flex items-center justify-center w-32 h-32 bg-muted rounded-lg overflow-hidden">
+                  <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-muted rounded-lg overflow-hidden">
                     {testimonial.image ? (
                       <img
                         src={testimonial.image}
                         alt={testimonial.title + ' logo'}
-                        className="object-contain w-24 h-24"
+                        className="object-contain w-12 h-12"
                       />
                     ) : testimonial.icon ? (
                       <span className="flex items-center justify-center" style={{ width: LOGO_SIZE, height: LOGO_SIZE }}>
                         {testimonial.icon}
                       </span>
                     ) : (
-                      <ImageIcon className="h-12 w-12 text-primary/50" />
+                      <ImageIcon className="h-6 w-6 text-primary/50" />
                     )}
                   </div>
                   {/* Text content on the right */}
                   <div className="flex flex-col flex-1 min-w-0">
-                    <CardTitle className="text-xl font-bold text-foreground mb-2 truncate">{testimonial.title}</CardTitle>
-                    <p className="text-lg text-muted-foreground mb-2 break-words whitespace-pre-line leading-relaxed">
+                    <CardTitle className="text-base font-bold text-foreground mb-1 truncate">{testimonial.title}</CardTitle>
+                    <p className="text-sm text-muted-foreground mb-1 break-words whitespace-pre-line leading-relaxed">
                       {testimonial.testimonial}
                     </p>
                     {testimonial.author && (
-                      <span className="text-base text-muted-foreground mt-2 font-medium">{testimonial.author}</span>
+                      <span className="text-xs text-muted-foreground mt-1 font-medium">{testimonial.author}</span>
                     )}
                   </div>
                 </CardContent>
