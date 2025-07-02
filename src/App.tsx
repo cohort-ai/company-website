@@ -10,10 +10,6 @@ import AIAdvisoryPage from './components/AIAdvisoryPage'
 import AIRecruitmentPage from './components/AIRecruitmentPage'
 import { ScrollToTop } from './components/ui/ScrollToTop'
 
-function Dummy({ name }: { name: string }) {
-  return <div className="p-8 text-center text-2xl">{name} Page (Coming Soon)</div>;
-}
-
 function App() {
   return (
     <>

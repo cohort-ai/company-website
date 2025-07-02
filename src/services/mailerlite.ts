@@ -1,8 +1,3 @@
-interface SubscriberData {
-  email: string;
-  groups?: string[];
-}
-
 export class MailerLiteService {
   private apiKey: string;
   private baseUrl = 'https://connect.mailerlite.com/api';
@@ -57,8 +52,8 @@ export class MailerLiteService {
       }
 
       const data = await response.json();
-      const group = data.data.find((g: any) => g.name.toLowerCase() === groupName.toLowerCase());
-      
+      const group = data.data.find((g: { name: string }) => g.name.toLowerCase() === groupName.toLowerCase());
+
       return group ? group.id : null;
     } catch (error) {
       console.error('Failed to fetch groups:', error);
