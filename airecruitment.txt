@@ -1,0 +1,13 @@
+- Main heading: Human-Centric AI for Smarter Recruitment
+- Main body: Workforce is an AI-powered virtual recruitment agent designed to transform hiring by combining intelligent technology with personalized career coaching. We help companies find the right talent and empower candidates to discover and achieve their ideal careers.
+
+Button: Pre-Launch Waitlist email submission with Captcha
+
+- Panel 1 heading: Personalized Career Coaching
+- Panel 1 body: Our AI helps candidates explore their career goals, providing tailored guidance and building profiles that go beyond CV/resumes to include aspirations and potential.
+
+- Panel 2 heading: Intelligent Job & Team Profiling
+- Panel 2 body: We analyze job roles and hiring teams deeply to identify critical success factors, ensuring candidates are matched not just by skills but by fit and potential.
+
+- Panel 3 heading: Human-AI Collaboration
+- Panel 3 body: Workforce augments recruiters and hiring managers by automating routine tasks while preserving human judgment for nuanced decisions, creating a balanced and effective hiring process.

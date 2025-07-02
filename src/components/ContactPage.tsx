@@ -41,18 +41,19 @@ export default function ContactPage() {
         subtitle="Schedule a consultation today"
       />
 
-      <div className="flex justify-center px-4 py-12">
+      <div className="flex justify-center px-4 py-6 sm:py-12">
         <div className="max-w-2xl w-full">
-          <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-6 bg-card p-8 rounded-lg shadow-lg">
-            <Input name="name" placeholder="Name" required autoComplete="name" className="h-12 text-lg" />
-            <Input name="company" placeholder="Company" required autoComplete="organization" className="h-12 text-lg" />
-            <Input name="number" placeholder="Phone Number" autoComplete="tel" className="h-12 text-lg" />
-            <Textarea name="message" placeholder="Your message" required rows={12} className="text-lg min-h-48" />
-            <Button type="submit" disabled={loading} className="mt-4 h-12 text-lg">
+          <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6 bg-card p-6 sm:p-8 rounded-lg shadow-lg">
+            <Input name="name" placeholder="Name" required autoComplete="name" className="h-10 sm:h-12 text-base sm:text-lg" />
+            <Input name="email" placeholder="Email" type="email" required autoComplete="email" className="h-10 sm:h-12 text-base sm:text-lg" />
+            <Input name="company" placeholder="Company" required autoComplete="organization" className="h-10 sm:h-12 text-base sm:text-lg" />
+            <Input name="number" placeholder="Phone Number" required autoComplete="tel" className="h-10 sm:h-12 text-base sm:text-lg" />
+            <Textarea name="message" placeholder="Your message" required rows={6} className="text-base sm:text-lg min-h-24 sm:min-h-48 sm:rows-12" />
+            <Button type="submit" disabled={loading} className="mt-2 sm:mt-4 h-10 sm:h-12 text-base sm:text-lg">
               {loading ? "Sending..." : "Send Message"}
             </Button>
-            {status === "success" && <div className="text-green-500 text-center mt-4 text-lg">Message sent! We'll be in touch soon.</div>}
-            {status === "error" && <div className="text-red-500 text-center mt-4 text-lg">Something went wrong. Please try again.</div>}
+            {status === "success" && <div className="text-green-500 text-center mt-2 sm:mt-4 text-base sm:text-lg">Message sent! We'll be in touch soon.</div>}
+            {status === "error" && <div className="text-red-500 text-center mt-2 sm:mt-4 text-base sm:text-lg">Something went wrong. Please try again.</div>}
           </form>
         </div>
       </div>

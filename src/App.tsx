@@ -7,6 +7,7 @@ import ContactPage from './components/ContactPage'
 import TeamPage from './components/TeamPage'
 import MissionPage from './components/MissionPage'
 import AIAdvisoryPage from './components/AIAdvisoryPage'
+import AIRecruitmentPage from './components/AIRecruitmentPage'
 import { ScrollToTop } from './components/ui/ScrollToTop'
 
 function Dummy({ name }: { name: string }) {
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/solutions/ai-advisory" element={<AIAdvisoryPage />} />
-        <Route path="/solutions/ai-recruitment" element={<Dummy name="AI Recruitment" />} />
+        <Route path="/solutions/ai-recruitment" element={<AIRecruitmentPage />} />
         <Route path="/about" element={<Navigate to="/about/mission" replace />} />
         <Route path="/about/mission" element={<MissionPage />} />
         <Route path="/about/team" element={<TeamPage />} />

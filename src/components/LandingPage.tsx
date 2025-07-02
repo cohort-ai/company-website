@@ -32,7 +32,7 @@ export default function LandingPage() {
       <HeroCard />
 
       {/* Main content container */}
-      <div className="w-full sm:max-w-6xl mx-auto px-0 sm:px-4 py-8 sm:py-12 flex flex-col gap-12 sm:gap-16">
+      <div className="w-full sm:max-w-6xl mx-auto px-4 py-8 sm:py-12 flex flex-col gap-12 sm:gap-16">
         {/* Services + Products */}
         <section className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full">

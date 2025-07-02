@@ -80,8 +80,8 @@ export function TestimonialCarousel({ testimonials, interval = 3000 }: Testimoni
 
   return (
     <div
-      className="relative flex flex-col items-center overflow-hidden"
-      style={{ height: isMobile ? CARD_HEIGHT : CARD_HEIGHT * VISIBLE_CARDS, minHeight: isMobile ? CARD_HEIGHT : CARD_HEIGHT * VISIBLE_CARDS }}
+      className="relative flex flex-col items-center px-4"
+      style={{ height: isMobile ? CARD_HEIGHT : CARD_HEIGHT * VISIBLE_CARDS, minHeight: isMobile ? CARD_HEIGHT : CARD_HEIGHT * VISIBLE_CARDS, overflow: isMobile ? 'visible' : 'hidden' }}
     >
       <div
         className="flex flex-col w-full"
@@ -105,8 +105,8 @@ export function TestimonialCarousel({ testimonials, interval = 3000 }: Testimoni
                 pointerEvents: 'none',
               }}
             >
-              <Card className={`w-full ${isCenter ? 'max-w-none sm:max-w-xl' : 'max-w-xl'} min-h-48 flex flex-col items-center border-2 border-primary/20 bg-background transition-all duration-700 ${isCenter ? 'shadow-xl border-primary/40' : 'shadow-none'}`}>
-                <CardContent className={`flex flex-row items-center flex-1 justify-center gap-6 w-full py-10 px-2 sm:px-8`}>
+              <Card className={`w-full ${isCenter ? 'sm:max-w-xl' : 'max-w-xl'} min-h-48 flex flex-col items-center border-2 border-primary/20 bg-background transition-all duration-700 ${isCenter ? 'shadow-xl border-primary/40' : 'shadow-none'}`}>
+                <CardContent className={`flex flex-row items-center flex-1 justify-center gap-4 sm:gap-6 w-full py-6 sm:py-10 px-4 sm:px-8`}>
                   {/* Logo/Image on the left */}
                   <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-muted rounded-lg overflow-hidden">
                     {testimonial.image ? (
