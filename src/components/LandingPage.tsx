@@ -8,8 +8,8 @@ import DemoBanner from "@/components/ui/DemoBanner";
 
 const testimonials = [
   {
-    title: "SME Retailer",
-    testimonial: "With Cohort's AI Advisory, we launched a custom chatbot that reduced support tickets by 40%.",
+    title: "Gemstone Lab",
+    testimonial: "With Cohort's AI Advisory, we discovered how AI can help us scale and just as importantly, how not to use it.",
     image: dummyImg,
   },
   {
@@ -19,8 +19,8 @@ const testimonials = [
     author: "— Fred Cox, Founder",
   },
   {
-    title: "Logistics SME",
-    testimonial: "AI Recruitment helped us hire top engineers 2x faster, saving weeks of manual screening.",
+    title: "Property Startup",
+    testimonial: "Cohort provided us with advice on AI adoption to help us optimise our workflow.",
     image: dummyImg,
   },
 ];

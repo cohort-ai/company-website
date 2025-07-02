@@ -9,13 +9,13 @@ const team = [
     name: "Tony Ng",
     photo: tonyPhoto,
     linkedin: "https://www.linkedin.com/in/tonyktng/",
-    bio: "Tony Ng leads with key recruitment market insights & product design 20+ years experience as a Technology Consultant in London, NYC & HK."
+    bio: "Tony Ng has 20+ years experience as a Technology Consultant in London, NYC & HK. Leads product design & market insights."
   },
   {
     name: "Rafal Koziarz",
     photo: rafalPhoto,
     linkedin: "https://www.linkedin.com/in/rafalkoziarz/",
-    bio: "Rafal Koziarz drives AI and technical development goals with 15 years experience as a Technical Lead & Architect in London & HK."
+    bio: "Rafal Koziarz has 15 years experience as a Technical Lead & Architect in London & HK. Drives AI and technical development goals."
   }
 ];
 
